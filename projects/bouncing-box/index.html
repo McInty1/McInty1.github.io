@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: ;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -76,6 +76,7 @@
 			var positionY = 10;
 			var speedY = 10;
 			var boardHeight = jQuery(window).height();
+			var randNum = Math.random() * boardWidth;
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
@@ -85,6 +86,8 @@
 				   /* Your Code to Increase positionX by 10 HERE */
 			positionX = positionX + speed;
 			positionY = positionY + speedY;
+		
+			
 			moveBoxTo(positionX, positionY);
 			if (positionX > boardWidth) {
 				speed = speed * -1;
